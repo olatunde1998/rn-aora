@@ -19,7 +19,7 @@ const ForgotPassword = () => {
     setSubmitting(true);
     try {
       Alert.alert("Success", "User signed in successfully");
-      router.replace("/home");
+      router.replace("/sign-in");
     } catch (error: any) {
       // Alert.alert("Error", error.message);
       console.log(error, "error occurred here==");
