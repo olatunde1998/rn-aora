@@ -5,7 +5,7 @@ import icons from "@/constants/icons";
 
 const VideoCard = () => {
   return (
-    <View className="px-8 mt-8">
+    <View className="px-7 mt-8">
       <View className="flex flex-row justify-between items-start">
         <View className="flex flex-row gap-4">
           <View className="border border-secondary-100 rounded-lg w-[46px] h-[46px]">
