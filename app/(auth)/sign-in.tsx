@@ -5,8 +5,9 @@ import images from "@/constants/images";
 import FormField from "@/components/FormField";
 import { Link, router } from "expo-router";
 import CustomButton from "@/components/CustomButton";
+import { SignIn } from "@/lib/appwrite";
 
-const SignIn = () => {
+const SignInPage = () => {
   const [isSubmitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
     email: "",
@@ -19,11 +20,14 @@ const SignIn = () => {
     }
     setSubmitting(true);
     try {
+      // const result = await SignIn(form.email, form.password);
+      // set it to global state...
+      // console.log(result, "this is the result here==");
       Alert.alert("Success", "User signed in successfully");
       router.replace("/home");
     } catch (error: any) {
-      // Alert.alert("Error", error.message);
       console.log(error, "error occurred here==");
+      Alert.alert("Error", error.message);
     } finally {
       setSubmitting(false);
     }
@@ -86,4 +90,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default SignInPage;
